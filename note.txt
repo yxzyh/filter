@@ -1,0 +1,12 @@
+1.建立一个动态的网页工程。
+2.创建JSP页面，添加action。
+3.新建Filter，匹配“*.action”.
+4.在doFilter方法里，request转成HttpServletRquest hsr。
+5.获取action： hrs.getServletPath();
+6.设置要跳转的路劲： path=“/WEB-INF/pages/” +"inputInfo.jsp" or"showInfo.jsp".
+7.跳转页面的方法： request.getRequestDispatcher(path).forward(request,response);
+9.新建POJO：User。
+10.Java获取页面的值，String userName = request.getParamer("userName");String userAccount = request.getParamer("userAccount");...
+11.定义user： User user = new User(userName;userAccount;userPwd);
+12.inputInfo.jsp 添加 form，action，method="post".
+12.showInfo.jsp 获取页面的值。 ${requestScope.user.userName} ... 注意：$ {}.
